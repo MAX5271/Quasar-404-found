@@ -14,6 +14,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  String pass,id;
   TextEditingController signin = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   @override
@@ -84,6 +85,28 @@ class _SignInState extends State<SignIn> {
                       leading: Icon(Icons.key),
                       hintText: "Password",
                       controller: passwordController),
+                ),
+                    ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                      Colors.grey[100],
+                    ),
+                    foregroundColor: MaterialStatePropertyAll(
+                      Colors.blue[300],
+                    ),
+                  ),
+                  onPressed: () {
+                    id=singin;
+                    pass=passwordController;
+                    
+                  },
+                  child: Text(
+                    "Continue",
+                    style: TextStyle(
+                        fontFamily: 'poppins',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w100),
+                  ),
                 ),
                 ElevatedButton(
                   style: ButtonStyle(
